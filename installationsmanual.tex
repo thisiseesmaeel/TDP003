@@ -1,0 +1,125 @@
+\documentclass{TDP003mall}
+\usepackage{graphicx}
+\graphicspath{ {home/TDP003/Installationsmanual/} }
+
+
+\newcommand{\version}{Version 1.0}
+\author{Philip och Ismail}
+\title{Installationsmanual}
+\date{2020-09-16}
+\rhead{Philip\\
+Ismail\\}
+
+
+
+\begin{document}
+\projectpage
+\section{Revisionshistorik}
+\begin{table}[!h]
+\begin{tabularx}{\linewidth}{|l|X|l|}
+\hline
+Ver. & Revisionsbeskrivning & Datum \\\hline
+1.0 & Första utkastet av installationsmanualen & 20-09-16 \\\hline
+\end{tabularx}
+\end{table}
+
+\section{Emacs}
+Installationsmanual för \textbf{Emacs} i Linux-system.
+För att installera Emacs på ditt system, ska den följande kommandot användas i terminalen:
+\begin{itemize}  
+\item
+ \textbf{sudo apt install emacs}
+\end{itemize}
+Om man vill, man kan kontrollera vilken version av \textbf{Emacs} är installerad med följande kommandot:
+\begin{itemize}
+\item
+  \textbf{emacs --version}
+\end{itemize}
+
+\section{PyCharm}
+Installationsmanual för \textbf{PyCharm} i Linux-system.
+För att installera \textbf{PyCharm}, ska den följande kommandot användas i terminalen:
+\begin{itemize}
+\item
+sudo snap install pycharm-community --classic
+\end{itemize}
+När installationen är klar, så ska det se ut såhär:
+
+\includegraphics [scale=0.5] {installpycharm}
+
+Vilket innebär att installationen är klar.
+
+\section{Magit}
+Installationsmanual för \textbf{Magit} i Linux-system. 
+För att installera Magit, behövs \textbf{Melpa} också vilket ingår i dessa steg.
+\begin{itemize}
+\item
+Skriv \textit{cd} i terminalen för att flytta till \textit{home}
+\item
+  Skriv \textit{emacs .emacs} för att öppna \textbf{.emacs}
+\item
+  Lägg till följande text:
+
+  
+\begin{verbatim}
+ (require 'package)
+ (add-to-list 'package-archives
+         '(''melpa-stable''.''https://stable.melpa.org/packages/)t)
+\end{verbatim}
+
+  
+  \includegraphics [scale=0.5] {ettan}
+  
+\item
+  Spara filen och stäng den. Öppna upp den igen precis som i steg 2.
+\item
+  Skriv \textit{M-x package-refresh-contents}
+\item
+  Skriv \textit{M-x list-packages}
+\item
+  Leta igenom listan och tryck på \textit{magit}
+\item
+  Klicka på ''install'' och klicka ''yes'', \textbf{Magit} borde nu installeras.
+  
+  \includegraphics [scale=0.5] {tva}
+  
+\item
+  För att säkerställa att den har installerats kan följande kommando skrivas:
+  \textbf{M-x magit-status}
+
+  
+\end{itemize}
+
+
+  Då borde ''Git repository'' dyka upp i minibuffern.
+
+  \includegraphics [scale=0.5] {tre}
+
+
+\section{Flask och Jinja2}
+\textit{venv} står för ''virtual environments'' och behövs ifall datorn innehåller olika pythonprojekt och t.o.m. olika versioner av python. Dessa kan störa varandra och \textit{venv} gör så att ditt pythonprojekt isoleras från dina andra pythonprojekt.
+
+\textit{Jinja2 ingår i \textbf{Flask}}
+
+\begin{itemize}
+\item
+  Skapa ett direktiv med kommandot \textit{''mkdir Portfolio''}
+\item
+  Flytta dig till direktivet med kommandot \textit{''cd Portfolio''}
+\item
+  Skriv \textit{''python3 -m venv venv''}
+  \subitem
+  Om det inte funkar måste du ladda ner \textit{venv}. Skriv \textit{''sudo apt-get install python3-venv''}, logga in och skriv \textit{''y''}. När den har installerats klart, skriv kommandot i \textbf{3} igen.
+\item
+  Skriv \textit{''. venv/bin/activate''.} Nu kommer \textit{''(venv)''} att stå i terminalen framför ditt namn.
+\item
+  Inom \textit{venv}, skriv \textit{''pip install Flask''.} Nu har Flask installerats i din virtuella maskin.
+
+  För att avsluta \textit{venv} kan du antingen skriva \textit{''exit''} eller trycka \textit{Ctrl+d}. Då kommer hela terminalen att stängas. För att öppna \textit{venv} igen kan du följa steg 4. 
+
+  
+  \includegraphics [scale=0.5] {jinja}
+  
+\end{itemize}
+
+\end{document}

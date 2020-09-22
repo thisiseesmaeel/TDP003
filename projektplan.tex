@@ -1,0 +1,189 @@
+\documentclass{TDP003mall}
+
+
+
+\newcommand{\version}{Version 1.1}
+\author{Philip och Ismail}
+\title{Projektplan}
+\date{2020-09-22}
+\rhead{Philip och Ismail}
+
+
+
+
+\begin{document}
+\projectpage
+
+\tableofcontents
+\newpage
+
+\section{Revisionshistorik}
+\begin{table}[!h]
+\begin{tabularx}{\linewidth}{|l|X|l|}
+\hline
+Ver. & Revisionsbeskrivning & Datum \\\hline
+1.1 & Projektplan skapad & 22/9 2020 \\\hline
+\end{tabularx}
+\end{table}
+
+
+\section{Introduktion}
+I projektet kommer en hemsida som fungerar som en portfolio skapas där framtida projekt kan visas och laddas upp. Webbplatsen kommer att bestå av två huvuddelar: ett datalager och ett presentationslager. Presentationslagret kommer att bestå av HTML- och CSS-kod medan datalagret består av en JSON-fil. Båda dessa huvuddelar kommer att integreras med API.
+
+Slutplanen är att vem som helst ska kunna använda och underhålla systemet. En installationsmanual och systemdokumentation kommer därför att skapas. Systemet kommer även att testas av en tredje person för att garantera kvalitet, och baserat på detta kommer även en testdokumentation att skapas.
+
+Tekniker som kommer att användas är:
+
+\begin{itemize}
+\item
+  Python
+\item
+  Git
+\item
+  Flask
+\item
+  Jinja2
+\item
+  Json
+\item
+  HTML5 och CSS
+\end{itemize}
+
+\section{Risker}
+På grund av COVID-19 finns det en risk att bli sjuk (och i helhelt bli allmän sjuk). Då kommer distansläge att försöka göras. Det kan även bli så att komplettering behövs i vissa moment och då kommer extra tid att ägnas (t.ex. en extra dag).
+
+\subsection{Deadlines}
+\begin{table}[!h]
+\begin{tabularx}{\linewidth}{|l|X|}
+\hline
+Vecka & Beskrivning \\\hline
+37 & Planeringsdokumentet \\\hline
+38 & LoFi-prototyp, grundläggande installationsmanual \\\hline
+39 & Första utkast av projektplanen, första versionen av den gemensamma installationsmenualen \\\hline
+40 & Konstruktiv kritik av installationsmanualen eller testerna, bug-fixar, godkänt datalager \\\hline
+41 & Presentationslarget \\\hline
+42 & Redovisning, portfolion publicerad, första versionen av systemdokumentationen \\\hline
+43 & Testdokumentation, indviduell reflektionsdokument, fixad systemdokumentation \\\hline
+\end{tabularx}
+\end{table}
+
+\newpage
+
+\section{Planering}
+\subsection*{Vecka 37}
+Planeringsdokumentet ska vara klar på torsdag 10/9.
+
+Retrospekt: Det inskickade planeringsdokumentet var inkomplett och behövdes kompletteras. Kompletteringen kommer därför att ske i vecka 38.
+
+\subsection*{Vecka 38}
+\begin{table}[!h]
+\begin{tabularx}{\linewidth}{|X|l|l|l|}
+\hline
+Moment & Hård deadline & Milstolpe & Tid \\\hline
+Lofi-prototypen & 17/9 & 15/9 & 1h \\\hline
+Installationsmanualen & 17/9 & 17/9 & 8h \\\hline
+Komplettering av planeringsdokumentet & N/A & 15/9 & 3h\\\hline
+\end{tabularx}
+\end{table}
+
+Tisdagen dedikeras till Lofi-prototypen och kompletteringen av planeringsdokumentet, medans installationsmanualen arbetas under onsdag och torsdag.
+
+LoFi-prototypen kommer att vara en skiss på hur hemsidan kommer att se ut och vilka funktioner den har. Skissen kommer att vara på papper. Den ska innehålla en tab för projekt och tekniker som har använts. Den ska vara tydlig.
+
+I den grundläggande installationsmanualen ska instruktioner för hur man installerar och underhåller vår portfolio finnas med. Målgruppen är någon som vet och kan använda Linux men inte särskilt mycket.
+
+\begin{itemize}
+\item
+  Tillvägagången skall visas med konkreta och förklarade exempel, kommandon och skärmdumpar.
+\item	
+  Systemkrav, programvarukrav och förutsättningar skall dokumenteras, och vanliga fel beskrivas.
+\item	
+  Installationsmanualen skall innehålla ett avsnitt om felsökning och underhåll. Beskriv hur nya projekt kan läggas till och hur gamla kan modifieras.
+\item	
+  Bilder/figurer ska ha förklarande figurtexter med nummer, och de ska refereras till i texten
+\item	
+  Det skall finnas information om författare, datum, dokumentversion, projektnamn, kurs och totalt antal sidor (dessa saker är bra att ha med i en dokumentmall, t.ex. i sidhuvud/sidfot på varje sida). 
+\end{itemize}
+
+Retrospekt: Installationsmanualen tog 5 timmar att skriva, lo-fi:n tog 3 timmar  att skapa och kompletteringen tog 2h att slutföra. Det var en del i installationsmanualen som missuppfattades, nämligen vilka program som skulle dokumenteras, vilket kostade en halvtimmes arbete.
+
+\subsection*{Vecka 39}
+\begin{table}[!h]
+\begin{tabularx}{\linewidth}{|X|l|l|l|}
+\hline
+Moment & Hård deadline & Milstolpe & Tid \\\hline
+Första utkast av projektplan & 24/9 & 24/9 & 2h \\\hline
+Första versionen av den gemensamma installationsmanualen & 24/9 & 24/9 & 5h \\\hline
+Datalager och API & N/A & * & *\\\hline
+\end{tabularx}
+\end{table}
+* = Så mycket som vi hinner
+
+Första utkastet av projektplanen och första versionen av den gemensamma installationsmanualen arbetas under tisdag och torsdag medan datalagret arbetas om de två förstnämnda momenten blir klara tidigt och på fredagen.
+
+Planeringsdokumentet kommer att vara bas till projektplanen så mycket av planeringsdokumentet kommer att kopieras och klistras in. Sedan kommer vi också att utöka projektplanen om det behövs.
+
+Arbetsbörden på den första versionen av den gemensamma installationsmanualen kommer att bero på allas installationsmanualer.
+
+Datalagret och API:n kommer att påbörjas på fredag. Då kommer alla dokumentationer att läsas så som kravspecifikationen och API-instruktionerna så att vi kan påbörja det nästa vecka.
+
+\subsection*{Vecka 40}
+\begin{table}[!h]
+\begin{tabularx}{\linewidth}{|X|l|l|l|}
+\hline
+Moment & Hård deadline & Milstolpe & Tid \\\hline
+Feedback & 1/10 & 1/10 & 5h* \\\hline
+Projektplan korrigerad & 1/10 & 29/9 & 2h* \\\hline
+Datalagret arbetat och godkänd & 2/10 & 1/10 & 12h\\\hline
+\end{tabularx}
+\end{table}
+* = Uppskattad extremfall
+
+Under tisdag och torsdag kommer alla moment för denna vecka att arbetas, samt datalagret och API:n.
+
+Feedback syftar på antingen den gemensamma installationsmanualen eller de gemensamma testerna av installationsmanualen. Eventuella brister ska då vara korrigerade.
+
+Projektplanen ska vara helt fri från eventuella brister denna vecka.
+
+Datalagret och API:t kommer att arbetas. Den kommer innehålla delsystem av python-moduler och andra saker som Flask, Jinja2 osv. Så fort en funktion är klar skall det dokumenteras för framtida moment. API:t består av en JSON fil och den kommer ha 6 funktionaliteter: load, get project count, get project, search, get techniques och get techinque stats. Mer info om i API-dokumentationen.
+
+\subsection*{Vecka 41}
+Tisdag och torsdag dedikeras till presentationslagret och att påbörja systemdokumentationen. Det finns inga hårda deadlines denna vecka men milstolpen är att få presentationslagret klar 8/10. Momentet uppskattas ta 16 timmar. Om det finns tid över kan systemdokumentationen börja läsas på.
+
+\subsection*{Vecka 42}
+\begin{table}[!h]
+\begin{tabularx}{\linewidth}{|X|l|l|l|}
+\hline
+Moment & Hård deadline & Milstolpe & Tid \\\hline
+Första versionen av systemdokumentationen & 15/10 & 15/10 & 12h \\\hline
+Portfolio publicerad & 15/10 & 15/10 & 6h \\\hline
+\end{tabularx}
+\end{table}
+
+Portfolion och den första versionen av systemdokumentationen kommer att arbetas under måndag, onsdag och torsdag.
+
+Liksom installationsmanualen kommer systemdokumentationen ha en målgrupp: en typisk IP-student. Den kommer innehålla information om hur systemet är uppbyggt, hur det fungerar samt felhantering. Den ska vara detaljerad och innehålla bl.a. bilder och sekvensdiagram.
+
+En systemredovisning kommer att hållas torsdag 15/10 också.
+
+\subsection*{Vecka 43}
+\begin{table}[!h]
+\begin{tabularx}{\linewidth}{|X|l|l|l|}
+\hline
+Moment & Hård deadline & Milstolpe & Tid \\\hline
+Testdokumentation inlämnad & 22/10 & * & 8h \\\hline
+Reflektionsdokument inlämnad & 22/10 & * & 2h \\\hline
+Systemdokumentation fri från eventuella brister & 22/10 & * & 6h \\\hline
+\end{tabularx}
+\end{table}
+* = Vet inte
+
+I testdokumentationen kommer testning av portfolions funktioner att dokumenteras. En tredje person kommer att testa då, och testdokumentationen kommer att baseras på deras tester.
+
+Reflektionsdokumentet kommer att innehålla lärdomar av att ha arbetat med projektet.
+
+Systemdokumentationen ska vara fri från eventuella brister.
+
+\end{document}
+
+

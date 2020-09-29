@@ -2,7 +2,7 @@
 
 
 
-\newcommand{\version}{Version 1.1}
+\newcommand{\version}{Version 1.2}
 \author{Philip och Ismail}
 \title{Projektplan}
 \date{2020-09-22}
@@ -24,6 +24,7 @@
 \hline
 Ver. & Revisionsbeskrivning & Datum \\\hline
 1.1 & Projektplan skapad & 22/9 2020 \\\hline
+1.2 & Projektplan kompletterad & 29/9 2020 \\\hline
 \end{tabularx}
 \end{table}
 
@@ -33,13 +34,9 @@ I projektet kommer en hemsida som fungerar som en portfolio skapas där framtida
 
 Slutplanen är att vem som helst ska kunna använda och underhålla systemet. En installationsmanual och systemdokumentation kommer därför att skapas. Systemet kommer även att testas av en tredje person för att garantera kvalitet, och baserat på detta kommer även en testdokumentation att skapas.
 
-\subsection{Organisationsplan}
-
-Projektgruppen består av [leverantör] och [leverantör] ...
-
 \subsection{Metodik}
 
-Vi kommer att jobba tillsammans under schemalagda tider och försöker vi lösa problemen gemensamt. För versionhanteringen använder vi Git för att ha alltid den senaste versionen av projektet oavsett var och hur vi jobbar.
+Projektgruppen består av Philip och Ismail och allt ansvaras av oss. Vi kommer att jobba tillsammans under schemalagda tider och försöker vi lösa problemen gemensamt. För versionhanteringen använder vi Git för att ha alltid den senaste versionen av projektet oavsett var och hur vi jobbar.
 
 \subsection{Tekniker}
 
@@ -59,6 +56,9 @@ Tekniker som kommer att användas är:
 \item
   HTML5 och CSS
 \end{itemize}
+
+\section{Installationsplan}
+I installationsmanualen står det instruktioner för att installera de olika program och verktyg som behövs för portfoliot. Det står också kortfattade förklaringar om dessa program och verktyg. Se dokumentet för \href{https://gitlab.liu.se/tdp003_2020/tdp003_2020_installationsmanual/-/blob/development_stage/installationsmanual.pdf}{installationsmanualen} för mer information.
 
 \section{Risker}
 På grund av COVID-19 finns det en risk att bli sjuk (och i helhelt bli allmän sjuk). Då kommer distansläge att försöka göras. Det kan även bli så att komplettering behövs i vissa moment och då kommer extra tid att ägnas (t.ex. en extra dag).
@@ -91,9 +91,9 @@ Retrospekt: Det inskickade planeringsdokumentet var inkomplett och behövdes kom
 \begin{tabularx}{\linewidth}{|l|X|l|l|l|l|}
 \hline
 Col & Moment & Hård deadline & Milstolpe & Tid & Klar \\\hline
-1 & Lofi-prototypen & 17/9 & 15/9 & 1h \\\hline
-2 & Installationsmanualen & 17/9 & 17/9 & 8h \\\hline
-3 & Komplettering av planeringsdokumentet & N/A & 15/9 & 3h\\\hline
+1 & Lofi-prototypen & 17/9 & 15/9 & 1h & 3h \\\hline
+2 & Installationsmanualen & 17/9 & 17/9 & 8h & 5h \\\hline
+3 & Komplettering av planeringsdokumentet & N/A & 15/9 & 3h & 2h\\\hline
 \end{tabularx}
 \end{table}
 
@@ -123,40 +123,50 @@ Retrospekt: Installationsmanualen tog 5 timmar att skriva, lo-fi:n tog 3 timmar 
 \begin{tabularx}{\linewidth}{|l|X|l|l|l|l|}
 \hline
 Col & Moment & Hård deadline & Milstolpe & Tid & Klar \\\hline
-1 & Första utkast av projektplan & 24/9 & 24/9 & 2h \\\hline
-2 & Första versionen av den gemensamma installationsmanualen & 24/9 & 24/9 & 5h \\\hline
-3 & Datalager och API & N/A & * & *\\\hline
+1 & Första utkast av projektplan & 24/9 & 24/9 & 2h & 2h \\\hline
+2 & Första versionen av den gemensamma installationsmanualen & 24/9 & 24/9 & 5h & 2h \\\hline
+3 & Datalager och API & N/A & * & * & *\\\hline
 \end{tabularx}
 \end{table}
 * = Så mycket som vi hinner
 
 Första utkastet av projektplanen och första versionen av den gemensamma installationsmanualen arbetas under tisdag och torsdag medan datalagret arbetas om de två förstnämnda momenten blir klara tidigt och på fredagen.
 
-Planeringsdokumentet kommer att vara bas till projektplanen så mycket av planeringsdokumentet kommer att kopieras och klistras in. Sedan kommer vi också att utöka projektplanen om det behövs.
+\begin{enumerate}
+\item
+  Planeringsdokumentet kommer att vara bas till projektplanen så mycket av planeringsdokumentet kommer att kopieras och klistras in. Sedan kommer vi också att utöka projektplanen om det behövs.
 
-Arbetsbörden på den första versionen av den gemensamma installationsmanualen kommer att bero på allas installationsmanualer.
+\item
+  Arbetsbörden på den första versionen av den gemensamma installationsmanualen kommer att bero på allas installationsmanualer.
 
-Datalagret och API:n kommer att påbörjas på fredag. Då kommer alla dokumentationer att läsas så som kravspecifikationen och API-instruktionerna så att vi kan påbörja det nästa vecka.
+\item
+  Datalagret och API:n kommer att påbörjas på fredag. Då kommer alla dokumentationer att läsas så som kravspecifikationen och API-instruktionerna så att vi kan påbörja det nästa vecka.
+\end{enumerate}
 
 \subsection*{Vecka 40}
 \begin{table}[!h]
 \begin{tabularx}{\linewidth}{|l|X|l|l|l|l|}
 \hline
 Col & Moment & Hård deadline & Milstolpe & Tid & Klar \\\hline
-1 & Feedback & 1/10 & 1/10 & 5h* \\\hline
-2 & Projektplan korrigerad & 1/10 & 29/9 & 2h* \\\hline
-3 & Datalagret arbetat och godkänd & 2/10 & 1/10 & 12h\\\hline
+1 & Feedback & 1/10 & 29/9 & 5h* & 1h \\\hline
+2 & Projektplan korrigerad & 1/10 & 29/9 & 2h* & \\\hline
+3 & Datalagret arbetat och godkänd & 2/10 & 1/10 & 12h & \\\hline
 \end{tabularx}
 \end{table}
 * = Uppskattad extremfall
 
 Under tisdag och torsdag kommer alla moment för denna vecka att arbetas, samt datalagret och API:n.
 
-Feedback syftar på antingen den gemensamma installationsmanualen eller de gemensamma testerna av installationsmanualen. Eventuella brister ska då vara korrigerade.
+\begin{enumerate}
+\item
+  Feedback syftar på antingen den gemensamma installationsmanualen eller de gemensamma testerna av installationsmanualen. Eventuella brister ska då vara korrigerade och milstolpen för det är på tisdag.
 
-Projektplanen ska vara helt fri från eventuella brister denna vecka.
+\item
+  Projektplanen ska vara helt fri från eventuella brister denna vecka och milstolpen för det är på tisdag också.
 
-Datalagret och API:t kommer att arbetas. Den kommer innehålla delsystem av python-moduler och andra saker som Flask, Jinja2 osv. Så fort en funktion är klar skall det dokumenteras för framtida moment. API:t består av en JSON fil och den kommer ha 6 funktionaliteter: load, get project count, get project, search, get techniques och get techinque stats. Mer info om i API-dokumentationen.
+\item
+  Datalagret och API:t kommer att arbetas. Den kommer innehålla delsystem av python-moduler och andra saker som Flask, Jinja2 osv. Så fort en funktion är klar skall det dokumenteras för framtida moment. API:t består av en JSON fil och den kommer ha 6 funktionaliteter: load, get project count, get project, search, get techniques och get techinque stats. Mer info om i API-dokumentationen. Milstolpen för det är på torsdag.
+\end{enumerate}
 
 \subsection*{Vecka 41}
 Tisdag och torsdag dedikeras till presentationslagret och att påbörja systemdokumentationen. Det finns inga hårda deadlines denna vecka men milstolpen är att få presentationslagret klar 8/10. Momentet uppskattas ta 16 timmar. Om det finns tid över kan systemdokumentationen börja läsas på.
@@ -166,14 +176,18 @@ Tisdag och torsdag dedikeras till presentationslagret och att påbörja systemdo
 \begin{tabularx}{\linewidth}{|l|X|l|l|l|l|}
 \hline
 Col & Moment & Hård deadline & Milstolpe & Tid & Klar \\\hline
-1 & Första versionen av systemdokumentationen & 15/10 & 15/10 & 12h \\\hline
-2 & Portfolio publicerad & 15/10 & 15/10 & 6h \\\hline
+1 & Första versionen av systemdokumentationen & 15/10 & 14/10 & 12h \\\hline
+2 & Portfolio publicerad & 15/10 & 14/10 & 6h \\\hline
 \end{tabularx}
 \end{table}
 
-Portfolion och den första versionen av systemdokumentationen kommer att arbetas under måndag, onsdag och torsdag.
+\begin{enumerate}
+\item
+  Portfolion och den första versionen av systemdokumentationen kommer att arbetas under måndag, tisdag och onsdag. Milstolparna för båda dessa element är på onsdag.
 
-Liksom installationsmanualen kommer systemdokumentationen ha en målgrupp: en typisk IP-student. Den kommer innehålla information om hur systemet är uppbyggt, hur det fungerar samt felhantering. Den ska vara detaljerad och innehålla bl.a. bilder och sekvensdiagram.
+\item
+  Liksom installationsmanualen kommer systemdokumentationen ha en målgrupp: en typisk IP-student. Den kommer innehålla information om hur systemet är uppbyggt, hur det fungerar samt felhantering. Den ska vara detaljerad och innehålla bl.a. bilder och sekvensdiagram.
+\end{enumerate}
 
 En systemredovisning kommer att hållas torsdag 15/10 också.
 
@@ -182,18 +196,24 @@ En systemredovisning kommer att hållas torsdag 15/10 också.
 \begin{tabularx}{\linewidth}{|l|X|l|l|l|l|}
 \hline
 Col & Moment & Hård deadline & Milstolpe & Tid & Klar \\\hline
-1 & Testdokumentation inlämnad & 22/10 & * & 8h \\\hline
-2 & Reflektionsdokument inlämnad & 22/10 & * & 2h \\\hline
-3 & Systemdokumentation fri från eventuella brister & 22/10 & * & 6h \\\hline
+1 & Testdokumentation inlämnad & 22/10 & 21/10 & 8h \\\hline
+2 & Reflektionsdokument inlämnad & 22/10 & 21/10 & 2h \\\hline
+3 & Systemdokumentation fri från eventuella brister & 22/10 & 21/10 & 6h \\\hline
 \end{tabularx}
 \end{table}
-* = Vet inte
 
-I testdokumentationen kommer testning av portfolions funktioner att dokumenteras. En tredje person kommer att testa då, och testdokumentationen kommer att baseras på deras tester.
+Momenten kommer att arbetas under måndag, tisdag och onsdag. Milstolparna för alla dessa moment är på onsdag.
 
-Reflektionsdokumentet kommer att innehålla lärdomar av att ha arbetat med projektet.
+\begin{enumerate}
+\item
+  I testdokumentationen kommer testning av portfolions funktioner att dokumenteras. En tredje person kommer att testa då, och testdokumentationen kommer att baseras på deras tester.
 
-Systemdokumentationen ska vara fri från eventuella brister.
+\item
+  Reflektionsdokumentet kommer att innehålla lärdomar av att ha arbetat med projektet.
+
+\item
+  Systemdokumentationen ska vara fri från eventuella brister.
+\end{enumerate}
 
 \end{document}
 

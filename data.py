@@ -2,13 +2,15 @@ import json
 import operator
 
 def load(filename):
-	with open(filename, "r") as f:
-		projects = list(json.load(f))
-		projects.sort(key=operator.itemgetter("project_id"))
+	try:
+		with open(filename, "r") as f:
+			projects = list(json.load(f))
+			projects.sort(key=operator.itemgetter("project_id"))
 		
-		return projects
+			return projects
 	
-	return None
+	except:
+		return None
 
 def get_project_count(db):
 	print(len(db))
@@ -21,26 +23,13 @@ def get_project(db, id):
 	
 	return None
 
-
-
-
-
-"""WIP"""
-#search field säger vad search ska kolla igenom
-# search kollar efter det du skrivit i search field
 def search(db, sort_by=None, sort_order=None, techniques=None, search=None, search_fields=None):
-	#search kollar igenom de search_fields som man anget och kollar efter det som search innehåller. Finns inte fields så går den genom alla project istället
         fields = []
-        #sort order
-        print(sort_order)
-	
-        def key(parameter):
-                return parameter[sort_by]
-
+        
         def matches(project):
                 if search_fields and search:
                         found = False
-                        for value in search_fields.values():
+                        for value in range(len(search_fields)):
                                 if search in str(value):
                                         found = True
 
@@ -64,23 +53,17 @@ def search(db, sort_by=None, sort_order=None, techniques=None, search=None, sear
         for project in db:
                 if matches(project):
                         fields.append(project)
-
+        
+        if sort_by == None:
+                return fields
+        
         if sort_order == "desc":
-                reverse = True
-                fields = sorted(fields, key=key, reverse = reverse)
+                fields = sorted(fields, key=lambda x: x[sort_by], reverse = True)
+                
         elif sort_order == "asc":
-                reverse = False
-                fields = sorted(fields, key=key, reverse = reverse)
-
-
-        #final.sort(key=operator.itemgetter(sort_by), reverse=reverse)
+                fields = sorted(fields, key=lambda x: x[sort_by])
 
         return fields
-
-
-
-
-
 
 def get_techniques(db):
 	slist = []
@@ -107,6 +90,4 @@ def get_technique_stats(db):
 
 	return dic
 
-
-
-db = load("data.json")
+#db = load("data.json")

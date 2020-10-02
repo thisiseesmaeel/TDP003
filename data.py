@@ -23,20 +23,23 @@ def get_project(db, id):
 	
 	return None
 
-def search(db, sort_by=None, sort_order=None, techniques=None, search=None, search_fields=None):
+
+"""Titta på if search and search_fields"""
+def search(db, sort_by='start_date', sort_order='desc', techniques=None, search=None, search_fields=None):
         fields = []
         
         def matches(project):
-                if search_fields and search:
+                if search and search_fields:
                         found = False
-                        for value in range(len(search_fields)):
-                                if search in str(value):
+                        for value in project.items():
+                                if search == value:
                                         found = True
-
+                                
+                                
                 if search and not search_fields:
                         found = False
                         for value in project.values():
-                                if search in str(value):
+                                if search == value:
                                         found = True
 
                         if not found:
@@ -53,9 +56,6 @@ def search(db, sort_by=None, sort_order=None, techniques=None, search=None, sear
         for project in db:
                 if matches(project):
                         fields.append(project)
-        
-        if sort_by == None:
-                return fields
         
         if sort_order == "desc":
                 fields = sorted(fields, key=lambda x: x[sort_by], reverse = True)
@@ -91,3 +91,13 @@ def get_technique_stats(db):
 	return dic
 
 #db = load("data.json")
+
+
+"""Resultat: course_name: HOHO ska ej inkluderas."""
+#[{'start_date': '2009-09-08', 'short_description': 'no', 'course_name': 'OKÄNT', 'long_description': 'no no no', 'group_size': 6, 'academic_credits': 'WUT?', 'lulz_had': 'medium', 'external_link': 'YY', 'small_image': 'X', 'techniques_used': ['ada', 'python'], 'project_name': '2007', 'course_id': 'TDP003', 'end_date': '2009-09-09', 'project_id': 2, 'big_image': 'XXX'}, 
+
+#{'start_date': '2009-09-07', 'short_description': 'no', 'course_name': 'OKÄNT', 'long_description': 'no no no', 'group_size': 4, 'academic_credits': 'WUT?', 'lulz_had': 'few', 'external_link': 'YY', 'small_image': 'X', 'techniques_used': ['c++', 'csv', 'python'], 'project_name': 'NEJ', 'course_id': 'TDP003', 'end_date': '2009-09-08', 'project_id': 3, 'big_image': 'XXX'}, 
+
+#{'start_date': '2009-09-06', 'short_description': 'no', 'course_name': 'HOHO', 'long_description': 'no no no', 'group_size': 8, 'academic_credits': 'WUT?', 'lulz_had': 'over 9000', 'external_link': 'YY', 'small_image': 'X', 'techniques_used': [], 'project_name': ',', 'course_id': ' "', 'end_date': '2009-09-07', 'project_id': 4, 'big_image': 'XXX'}, 
+
+#{'start_date': '2009-09-05', 'short_description': 'no', 'course_name': 'OKÄNT', 'long_description': 'no no no', 'group_size': 2, 'academic_credits': 'WUT?', 'lulz_had': 'many', 'external_link': 'YY', 'small_image': 'X', 'techniques_used': ['python'], 'project_name': 'python data-module test script', 'course_id': 'TDP003', 'end_date': '2009-09-06', 'project_id': 1, 'big_image': 'XXX'}]

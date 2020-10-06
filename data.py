@@ -26,44 +26,49 @@ def get_project(db, id):
 
 """Titta på if search and search_fields"""
 def search(db, sort_by='start_date', sort_order='desc', techniques=None, search=None, search_fields=None):
-        fields = []
+	fields = []
         
-        def matches(project):
-                if search and search_fields:
-                        found = False
-                        for value in project.items():
-                                if search == value:
-                                        found = True
-                                
-                                
-                if search and not search_fields:
-                        found = False
-                        for value in project.values():
-                                if search == value:
-                                        found = True
+	def matches(project):
+		if search and search_fields:
+			for search_field in search_fields:
+				if search.upper() in str(project[search_field]):
+					return True
+				
+				elif search.lower() in str(project[search_field]):
+					return True
+				
+		if search and not search_fields:
+			found = False
+		
+			for value in project.values():
+				if search in str(value):
+					found = True
+					return True
+					
+			if not found:
+				return False
 
-                        if not found:
-                                return False
+		if techniques:
+			for tech in techniques:
+				if tech in project["techniques_used"]:
+					return True
+		
+		if not search and not search_fields and not techniques:
+			return True
+		
+		return False
 
-                if techniques:
-                        found = False
-                        for tech in techniques:
-                                if tech not in project["techniques_used"]:
-                                        return False        
-
-                return True
-
-        for project in db:
-                if matches(project):
-                        fields.append(project)
-        
-        if sort_order == "desc":
-                fields = sorted(fields, key=lambda x: x[sort_by], reverse = True)
+	for project in db:
+		if matches(project):
+			fields.append(project)
+		
+	if sort_order == "desc":
+		fields = sorted(fields, key=lambda x: x[sort_by], reverse = True)
                 
-        elif sort_order == "asc":
-                fields = sorted(fields, key=lambda x: x[sort_by])
+	elif sort_order == "asc":
+		fields = sorted(fields, key=lambda x: x[sort_by])
 
-        return fields
+	return fields
 
 def get_techniques(db):
 	slist = []

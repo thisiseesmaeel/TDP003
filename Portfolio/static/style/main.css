@@ -1,0 +1,17 @@
+li {
+    display: inline;
+    background-color: #C0C0C0;
+    padding: 10px 60px 10px 60px;
+    margin: 60px;
+}
+
+body {
+    padding: 10px 80px 0px 80px;
+}
+
+.box {
+    float: right;
+    overflow-wrap: break-word;
+    width: 300px;
+    padding: 20px;
+}

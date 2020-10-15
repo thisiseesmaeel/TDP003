@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <title>Template</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/index.css') }}">
+    <meta charset="latin-1">
+    {% block head %}{% endblock %}
+  </head>
+  
+  <body>
+    <div class="topnav">
+      <center>
+	<ul>
+	  <li><a href="/">Home</a></li>
+	  <li><a href="techniques">Techniques</a></li>
+	  <li><a href="list">Projects</a></li>
+	  <ul>
+      </center>
+    </div>
+    
+    {% block body %}{% endblock %}
+
+    <footer style="text-align:center"><pre><b> &copy; 2020 Philip Nguyen, Ismail Safwat</b></pre></footer>
+  </body>
+
+</html>

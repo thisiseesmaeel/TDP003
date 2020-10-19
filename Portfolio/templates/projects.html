@@ -2,12 +2,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {% block title %} Projects page {% endblock %}
 {% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/main.css') }}">
 {% endblock %}
 {% block body %}
 <h1> Projects </h1>
-<p>
-
-<form class="" action="/list" method="GET">
+<form action="/list" method="POST">
   <input type="text" name="search" placeholder="Search in projects">
   <input type="submit" name="search_button" value="Search">
   
@@ -17,28 +16,31 @@
   </select>
   
   <select name="sort_by">
-    <option value="start_date">Start Date</option>
     <option value="project_name">Project Name</option>
+    <option value="course_name">Course Name</option>
+    <option value="course_id">Course ID</option>
+    <option value="academic_credits">Academic Credits</option>
+    <option value="start_date">Start Date</option>
     <option value="end_date">End Date</option>
   </select>
   <br>
   <br>
   
-  <label for="fields"><input type="checkbox" name="search_fields">Project name</label>
-  <label for="fields"><input type="checkbox" name="search_fields">Long Description</label>
-  <label for="fields"><input type="checkbox" name="search_fields">Short Description</label>
-  <label for="fields"><input type="checkbox" name="search_fields">Start date</label>
-  <label for="fields"><input type="checkbox" name="search_fields">End Date</label>
-  <label for="fields"><input type="checkbox" name="search_fields">Group Size</label>
-  <label for="fields"><input type="checkbox" name="search_fields">Course name</label>
-  <label for="fields"><input type="checkbox" name="search_fields">Course ID</label>
-  <label for="fields"><input type="checkbox" name="search_fields">Academic Credits</label>
+  <label for="fields"><input type="checkbox" value="project_name" name="search_fields">Project name</label>
+  <label for="fields"><input type="checkbox" value="course_name" name="search_fields">Course name</label>
+  <label for="fields"><input type="checkbox" value="course_id" name="search_fields">Course ID</label>
+  <label for="fields"><input type="checkbox" value="academic_credits" name="search_fields">Academic Credits</label>
+  <label for="fields"><input type="checkbox" value="group_size" name="search_fields">Group Size</label>
+  <label for="fields"><input type="checkbox" value="start_date" name="search_fields">Start date</label>
+  <label for="fields"><input type="checkbox" value="end_date" name="search_fields">End Date</label>
+  <label for="fields"><input type="checkbox" value="long_description" name="search_fields">Long Description</label>
+  <label for="fields"><input type="checkbox" value="short_description" name="search_fields">Short Description</label>
 </form>
 
-</p>
+<br>
 
 {% for project in get_search %}
-<a href="/project/{{project.project_id}}"><img src="../static/images/placeholder.png" alt="Project" width="250" height="250""><p>{{project.project_name}}</p></a>
+<a href="/project/{{project.project_id}}"><img src="{{ project.get('small_image') }}" alt="Project" width="250" height="250"><p>{{project.project_name}}</p></a>
 {% endfor %}
 
 {% endblock %}    

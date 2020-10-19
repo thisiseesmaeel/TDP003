@@ -6,9 +6,8 @@
     "long_description": "no no no",
     "group_size": 2,
     "academic_credits": "WUT?",
-    "lulz_had": "many",
     "external_link": "YY",
-    "small_image": "X",
+    "small_image": "../static/images/placeholder.png",
     "techniques_used": [
       "python"
     ],
@@ -16,7 +15,7 @@
     "course_id": "TDP003",
     "end_date": "2009-09-06",
     "project_id": 1,
-    "big_image": "XXX"
+    "big_image": "../static/images/placeholder2.png"
   },
   {
     "start_date": "2009-09-07",
@@ -25,9 +24,8 @@
     "long_description": "no no no",
     "group_size": 4,
     "academic_credits": "WUT?",
-    "lulz_had": "few",
     "external_link": "YY",
-    "small_image": "X",
+    "small_image": "../static/images/placeholder.png",
     "techniques_used": [
       "c++",
       "csv",
@@ -37,7 +35,7 @@
     "course_id": "TDP003",
     "end_date": "2009-09-08",
     "project_id": 3,
-    "big_image": "XXX"
+    "big_image": "../static/images/placeholder2.png"
   },
   {
     "start_date": "2009-09-08",
@@ -46,9 +44,8 @@
     "long_description": "no no no",
     "group_size": 6,
     "academic_credits": "WUT?",
-    "lulz_had": "medium",
     "external_link": "YY",
-    "small_image": "X",
+    "small_image": "../static/images/placeholder.png",
     "techniques_used": [
       "ada",
       "python"
@@ -57,25 +54,29 @@
     "course_id": "TDP003",
     "end_date": "2009-09-09",
     "project_id": 2,
-    "big_image": "XXX"
+    "big_image": "../static/images/placeholder2.png"
   },
   {
-    "start_date": "2009-09-06",
+    "start_date": "2020-08-31",
     "short_description": "no",
-    "course_name": "HOHO",
-    "long_description": "no no no",
-    "group_size": 8,
-    "academic_credits": "WUT?",
-    "lulz_had": "over 9000",
-    "external_link": "YY",
-    "small_image": "X",
+    "course_name": "Project: Personal Computer Environment",
+    "long_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu nibh quis purus iaculis interdum quis non nibh. Praesent semper egestas orci. Aliquam neque odio, viverra non vestibulum eu, aliquam at est. Praesent tempus odio nisl, eu venenatis urna egestas et. Suspendisse id est nibh. Sed vitae mauris maximus, pharetra mi ut, sagittis nunc. Duis sed ultrices libero, sit amet dignissim risus. In volutpat ornare dui in facilisis. Cras at finibus mauris, ut malesuada felis. Sed eleifend enim venenatis turpis iaculis, sed mollis lacus tincidunt. Phasellus sagittis lacinia justo non rhoncus. Donec rhoncus, elit nec ultricies dignissim, nisl lorem consequat nisi, id fringilla sapien nunc vitae nunc. Suspendisse sagittis, felis vitae imperdiet eleifend, augue odio suscipit felis, ut mollis sem odio ut risus. Suspendisse sagittis sagittis ipsum a sagittis. Nunc et hendrerit lorem.",
+    "group_size": 2,
+    "academic_credits": "6 hp",
+    "external_link": "https://liu.se/studieinfo/en/kurs/tdp003/ht-2020",
+    "small_image": "../static/images/portfolio.png",
     "techniques_used": [
-
+      "python",
+      "flask",
+      "jinja2",
+      "html",
+      "css",
+      "latex"
     ],
-    "project_name": ",",
-    "course_id": " \"",
-    "end_date": "2009-09-07",
+    "project_name": "Portfolio",
+    "course_id": "TDP003",
+    "end_date": "2020-10-28",
     "project_id": 4,
-    "big_image": "XXX"
+    "big_image": "../static/images/portfolio.png"
   }
 ]

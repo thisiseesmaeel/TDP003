@@ -1,36 +1,50 @@
-{% extends "base.html" %}
-{% block head %}
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <title>Template</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/index.css') }}">
+    <meta charset="latin-1">
+  </head>
 
-{% endblock %}
+  <body>
+    <div class="sidebar">
+      <h1>About us</h1>
+      <img src="../static/images/itsaboutus.jpg" alt="About me" width="300" height="300">
+      <p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <center>
+	<a href="https://www.facebook.com/"><img src="../static/images/facebook.png" alt="About me" width="50" height="50"></a>&nbsp;
+	<a href="https://www.instagram.com"><img src="../static/images/instagram.png" href="https://www.instagram.com/" alt="About me" width="50" height="50"></a>&nbsp;
+	<a href="https://twitter.com/"><img src="../static/images/twitter.png" href="https://twitter.com/" alt="About me" width="50" height="50"></a>
+      </center>
+    </div>
+    
+    <main>
+      <div class="main">
+	<div class="topnav">
+	  <center>
+	    <ul>
+	      <li><a href="/">Home</a></li>
+	      <li><a href="../techniques">Techniques</a></li>
+	      <li><a href="../list">Projects</a></li>
+	      <ul>
+	  </center>
+	</div>
+	
+	<br><br>
+	
+	<center>
+	  {% for project in db %}
+	  <a href="{{url_for('project_site', project_id=project['project_id']) }}"><img src="{{ project.get('small_image') }}" alt="Project" width="250" height="250"></a>
+	  {% endfor %}
+	</center>
+
+	<footer style="text-align:center"><pre><b> &copy; 2020 Philip Nguyen, Ismail Safwat</b></pre></footer>
+
+      </div>
+  </body>
   
-{% block body %}
-<div class="sidebar">
-  <h1>About me</h1>
-  <img src="../static/images/placeholder.png" alt="About me" width="300" height="300">
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  <p/>
+  </main>
   
-  <img src="../static/images/placeholder.png" alt="About me" width="50" height="50">
-  <img src="../static/images/placeholder.png" alt="About me" width="50" height="50">
-  <img src="../static/images/placeholder.png" alt="About me" width="50" height="50">
-  <img src="../static/images/placeholder.png" alt="About me" width="50" height="50">
-  <img src="../static/images/placeholder.png" alt="About me" width="50" height="50">
-</div>
-
-<main>
-  <div class="main">
-        
-    <br><br>
-
-    <center>
-      {% for project in db %}
-      <a href="{{url_for('project_site', project_id=project['project_id']) }}"><img src="../static/images/placeholder.png" alt="Project" width="250" height="250""><p>{{project.project_name}}</p></a>
-      {% endfor %}
-      
-    </center>
-      
-  </div>
-</main>
-{% endblock %}
-   
+</html>

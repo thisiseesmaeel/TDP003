@@ -29,17 +29,14 @@ def search(db, sort_by='start_date', sort_order='desc', techniques=None, search=
 	def matches(project):
 		if search and search_fields:
 			for search_field in search_fields:
-				if search.upper() in str(project[search_field]):
-					return True
-				
-				elif search.lower() in str(project[search_field]):
+				if search.lower() in str(project[search_field]).lower():
 					return True
 				
 		if search and not search_fields:
 			found = False
 		
 			for value in project.values():
-				if search in str(value):
+				if search.lower() in str(value).lower():
 					found = True
 					return True
 					
@@ -48,12 +45,15 @@ def search(db, sort_by='start_date', sort_order='desc', techniques=None, search=
 
 		if techniques:
 			for tech in techniques:
-				if tech in project["techniques_used"]:
-					return True
+				if not tech in project["techniques_used"]:
+					return False
+				
+			else:
+				return True
 		
 		if not search and not search_fields and not techniques:
 			return True
-		
+
 		return False
 
 	for project in db:

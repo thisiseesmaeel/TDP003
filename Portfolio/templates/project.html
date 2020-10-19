@@ -1,18 +1,29 @@
 {% extends "base.html" %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/main.css') }}">
+{% endblock %}
 {% block body %}
+<br>
     <div class="box">
-      <img src="../static/images/placeholder.png" alt="Project" width="300" height="300""><br><br>
-      <strong style="font-size: 14px !important; line-height: 20px !important;">Project ID:</strong> {{ project.get('project_id') }} <br>
+      <img src="{{ project.get('big_image') }}" alt="Project" width="300" height="300"><br><br>
+      <strong style="font-size: 14px !important; line-height: 20px !important;">Course Name:</strong> {{ project.get('course_name') }} <br>
       <strong style="font-size: 14px !important; line-height: 20px !important;">Course ID:</strong> {{ project.get('course_id') }} <br>
       <strong style="font-size: 14px !important; line-height: 20px !important;">Academic credits:</strong> {{ project.get('academic_credits') }} <br>
+      <strong style="font-size: 14px !important; line-height: 20px !important;">Group size:</strong> {{ project.get('group_size') }} <br>
       <strong style="font-size: 14px !important; line-height: 20px !important;">Start date:</strong> {{ project.get('start_date') }} <br>
       <strong style="font-size: 14px !important; line-height: 20px !important;">End date:</strong> {{ project.get('end_date') }} <br>
-      <strong style="font-size: 14px !important; line-height: 20px !important;">Group size:</strong> {{ project.get('group_size') }} <br>
-      <strong style="font-size: 14px !important; line-height: 20px !important;">Techniques:</strong> {{ project.get('techniques_used') }}
+      <strong style="font-size: 14px !important; line-height: 20px !important;">Techniques:</strong>
+      {% for technique in project['techniques_used'] %}
+      {{ technique }}{{ "," if not loop.last }}
+      {% endfor %} <br>
     </div>
+    
+    <h1> {{ project.get('project_name') }} </h1>
 
 <p>
   {{ project.get('long_description') }}
 </p>
+
+<strong style="font-size: 14px !important; line-height: 20px !important;">External Link:</strong> <a href="{{ project.get('external_link') }}">Click here</a>
 
 {% endblock %}

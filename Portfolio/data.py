@@ -1,6 +1,8 @@
 import json
 import operator
+#import json to load the json-file and import operator to get the value of the key "project_id" and sort it
 
+#returns all projects in the json-file
 def load(filename):
 	try:
 		with open(filename, "r") as f:
@@ -12,10 +14,12 @@ def load(filename):
 	except:
 		return None
 
+#returns the total number of projects
 def get_project_count(db):
 	print(len(db))
 	return len(db)
 
+#searches and returns one specific project based on id
 def get_project(db, id):
 	for project in db:
 		if project["project_id"] == id:
@@ -23,6 +27,8 @@ def get_project(db, id):
 	
 	return None
 
+#searches through all projects and if they match, adds to an empty list and sort them according to sort_by and sort_order
+#matches() looks if one project matches search_techniques and search_fields. If it does, it returns True. If it doesn't, it returns False
 def search(db, sort_by='start_date', sort_order='desc', techniques=None, search=None, search_fields=None):
 	fields = []
         
@@ -68,6 +74,7 @@ def search(db, sort_by='start_date', sort_order='desc', techniques=None, search=
 
 	return fields
 
+#searches and returns a list of all techniques used
 def get_techniques(db):
 	slist = []
 	for project in db:
@@ -80,6 +87,7 @@ def get_techniques(db):
 				slist.sort()
 	return slist
 
+#searches for all projects that contain techniques and returns them in lists in dictionary
 def get_technique_stats(db):
 	all_techniques = get_techniques(db)
 	dic = {}
